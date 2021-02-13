@@ -6,7 +6,8 @@
   "private": true,
   "bin": {
     "onmem-run": "./bin/onmem-run",
-    "onmem-post": "./bin/onmem-post"
+    "onmem-post": "./bin/onmem-post",
+    "onmem": "./bin/onmem"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
