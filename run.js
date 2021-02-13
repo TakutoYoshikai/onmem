@@ -5,16 +5,17 @@ let mem = {};
 
 app.post("/:id", (req, res) => {
   const id = req.params.id;
-  mem[id] = Buffer.alloc(0);
+  let buf = Buffer.alloc(0);
   req.on("data", (data, err) => {
     if (err) {
       console.error(err);
       res.status(500).send({ message: "NG" });
       return;
     }
-    mem[id] = Buffer.concat([mem[id], data]);
+    buf = Buffer.concat([buf, data]);
   });
   req.on("end", () => {
+    mem[id] = buf;
     res.status(200).send({ message: "OK" });
   });
 });
