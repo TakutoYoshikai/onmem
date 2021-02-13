@@ -22,4 +22,4 @@ app.get("/", (req, res) => {
   res.status(200).send(mem);
 });
 
-app.listen(3000);
+app.listen(3223);
