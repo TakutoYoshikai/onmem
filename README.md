@@ -26,5 +26,10 @@ echo <data> | onmem-post <DATA ID YOU DECIDED>
 onmem <DATA ID>
 ```
 
+**get key list**
+```bash
+onmem-keys
+```
+
 ### License
 MIT License
