@@ -18,12 +18,12 @@ onmem-run
 
 **set data**
 ```bash
-echo <data> | onmem-post
+echo <data> | onmem-post <DATA ID YOU DECIDED>
 ```
 
 **get data**
 ```bash
-onmem
+onmem <DATA ID>
 ```
 
 ### License
