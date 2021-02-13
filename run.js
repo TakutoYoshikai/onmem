@@ -30,4 +30,4 @@ app.get("/:id", (req, res) => {
   res.status(200).send(mem[id]);
 });
 
-app.listen(3223);
+app.listen(3223, "127.0.0.1");
