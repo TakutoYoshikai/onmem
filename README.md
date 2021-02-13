@@ -1,6 +1,10 @@
 # onmem
 onmem is data storage on memory. You should think it as a clipboard.
 
+### Requirements
+* Ubuntu 20.10
+* Node.js
+
 ### Usage
 **install**
 ```bash
