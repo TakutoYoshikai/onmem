@@ -1,10 +1,12 @@
 #!/bin/bash
 
 files=($(find $1 -type f))
+d1=`pwd`
 cd $1
-d=`pwd`
-len=${#d}
+d2=`pwd`
+len=${#d2}
 len=$((len + 1))
+cd $d1
 for file in "${files[@]}"
 do
   echo ${file:len}
