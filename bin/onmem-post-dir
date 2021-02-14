@@ -1,0 +1,12 @@
+#!/bin/bash
+
+files=($(find $1 -type f))
+cd $1
+d=`pwd`
+len=${#d}
+len=$((len + 1))
+for file in "${files[@]}"
+do
+  echo ${file:len}
+  cat $file | onmem-post ${file:len}
+done
