@@ -3,8 +3,8 @@ const app = express();
 
 let mem = {};
 
-app.post("/:id", (req, res) => {
-  const id = req.params.id;
+app.post("/:path*", (req, res) => {
+  const path = req.path.substring(1);
   let buf = Buffer.alloc(0);
   req.on("data", (data, err) => {
     if (err) {
@@ -15,7 +15,7 @@ app.post("/:id", (req, res) => {
     buf = Buffer.concat([buf, data]);
   });
   req.on("end", () => {
-    mem[id] = buf;
+    mem[path] = buf;
     res.status(200).send({ message: "OK" });
   });
 });
@@ -25,9 +25,9 @@ app.get("/", (req, res) => {
   res.status(200).send(keys);
 });
 
-app.get("/:id", (req, res) => {
-  const id = req.params.id;
-  res.status(200).send(mem[id]);
+app.get("/:path*", (req, res) => {
+  const path = req.path.substring(1);
+  res.status(200).send(mem[path]);
 });
 
 app.listen(3223, "127.0.0.1");
