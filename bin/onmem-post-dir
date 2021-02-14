@@ -1,9 +1,9 @@
 #!/bin/bash
 
-files=($(find $1 -type f))
 d1=`pwd`
 cd $1
 d2=`pwd`
+files=($(find $d2 -type f))
 len=${#d2}
 len=$((len + 1))
 cd $d1
