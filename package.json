@@ -7,6 +7,7 @@
   "bin": {
     "onmem-run": "./bin/onmem-run",
     "onmem-post": "./bin/onmem-post",
+    "onmem-post-dir": "./bin/onmem-post-dir",
     "onmem-keys": "./bin/onmem-keys",
     "onmem": "./bin/onmem"
   },
