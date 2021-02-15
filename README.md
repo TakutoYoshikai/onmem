@@ -38,7 +38,7 @@ onmem <REMOTE HOST> <DATA ID>
 
 **get key list**
 ```bash
-onmem-keys
+onmem
 ```
 
 ### License
