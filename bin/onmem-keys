@@ -1,3 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env node
 
-curl localhost:3223/
+require("../keys");
+
