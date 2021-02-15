@@ -4,4 +4,13 @@ if [ "$1" = "" ]; then
   onmem-keys localhost
   exit
 fi
-curl localhost:3223/$1
+
+if [ "$2" = "" ]; then
+  curl localhost:3223/$1
+  exit
+fi
+
+if [ "$2" != "" ]; then
+  onmem $1:3223/$2
+  exit
+fi
