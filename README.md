@@ -11,7 +11,12 @@ onmem is a data storage on memory. You should think it as a clipboard.
 npm install -g TakutoYoshikai/onmem
 ```
 
-**run process**
+**run process (public on network)**
+```bash
+onmem-run public
+```
+
+**run process (private on network)**
 ```bash
 onmem-run
 ```
