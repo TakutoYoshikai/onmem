@@ -3,6 +3,7 @@
 d1=`pwd`
 cd $1
 d2=`pwd`
+bn=`basename $d2`
 files=($(find $d2 -type f))
 len=${#d2}
 len=$((len + 1))
@@ -10,5 +11,5 @@ cd $d1
 for file in "${files[@]}"
 do
   echo ${file:len}
-  cat $file | onmem-post ${file:len}
+  cat $file | onmem-post $bn/${file:len}
 done
