@@ -31,6 +31,11 @@ echo <data> | onmem-post <DATA ID YOU DECIDED>
 onmem <DATA ID>
 ```
 
+**get data from remote computer**
+```bash
+onmem <REMOTE HOST> <DATA ID>
+```
+
 **get key list**
 ```bash
 onmem-keys
