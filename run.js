@@ -30,4 +30,8 @@ app.get("/:path*", (req, res) => {
   res.status(200).send(mem[path]);
 });
 
+if (process.argv.length >= 3 && process.argv[2] === "public") {
+  app.listen(3223);
+  return;
+}
 app.listen(3223, "127.0.0.1");
