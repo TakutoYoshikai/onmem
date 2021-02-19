@@ -10,6 +10,6 @@ len=$((len + 1))
 cd $d1
 for file in "${files[@]}"
 do
-  echo ${file:len}
+  echo $bn/${file:len}
   cat $file | onmem-post $bn/${file:len}
 done
