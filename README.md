@@ -23,7 +23,7 @@ onmem-run
 
 **set data**
 ```bash
-echo <data> | onmem-post <DATA ID YOU DECIDED>
+echo <data> | onmem-post <DATA ID YOU DECIDED> <REMOTE HOST>
 ```
 
 **get data**
