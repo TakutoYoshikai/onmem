@@ -1,5 +1,5 @@
 # onmem
-onmem is a data storage on memory. You should think it as a clipboard.
+onmem is an online tmp directory.
 
 ### Requirements
 * Ubuntu 20.10
