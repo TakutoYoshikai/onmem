@@ -1,5 +1,5 @@
 # onmem
-onmem is an online tmp directory.
+onmem is an network tmp directory.
 
 ### Requirements
 * Ubuntu 20.10
