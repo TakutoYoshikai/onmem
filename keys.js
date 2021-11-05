@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const request = require("request");
 
 const host = process.argv[2];

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const request = require("request");
 
 const input = require("fs").readFileSync("/dev/stdin");
