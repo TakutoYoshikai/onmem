@@ -5,10 +5,10 @@
   "main": "index.js",
   "private": true,
   "bin": {
-    "onmem-run": "./bin/onmem-run",
-    "onmem-post": "./bin/onmem-post",
+    "onmem-run": "./run.js",
+    "onmem-post": "./post.js",
     "onmem-post-dir": "./bin/onmem-post-dir",
-    "onmem-keys": "./bin/onmem-keys",
+    "onmem-keys": "./keys.js",
     "onmem": "./bin/onmem"
   },
   "scripts": {
