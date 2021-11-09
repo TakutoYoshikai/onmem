@@ -2,8 +2,31 @@
 
 const express = require("express");
 const app = express();
+const usbkey = require("usbkey");
+const home = require("os").homedir();
+const fs = require("fs");
 
 let mem = {};
+
+const lockMode = fs.existsSync(home + "/.usbkey");
+let isLocked = true;
+
+if (lockMode) {
+  usbkey.observe(home + "/.usbkey", {
+    add: function() {
+      isLocked = false;
+    },
+    remove: function() {
+      isLocked = true;
+    },
+  });
+}
+
+app.use(function(req, res, next) {
+  if (!lockMode || !isLocked) {
+    next();
+  }
+});
 
 app.post("/:path*", (req, res) => {
   const path = req.path.substring(1);
