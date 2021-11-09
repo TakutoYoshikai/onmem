@@ -24,10 +24,6 @@ if (lockMode) {
 
 
 app.post("/:path*", (req, res) => {
-  if (lockMode && isLocked) {
-    res.status(500).send({ message: "NG" });
-    return;
-  }
   const path = req.path.substring(1);
   let buf = Buffer.alloc(0);
   req.on("data", (data, err) => {
