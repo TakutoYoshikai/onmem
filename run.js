@@ -22,13 +22,12 @@ if (lockMode) {
   });
 }
 
-app.use(function(req, res, next) {
-  if (!lockMode || !isLocked) {
-    next();
-  }
-});
 
 app.post("/:path*", (req, res) => {
+  if (lockMode && isLocked) {
+    res.status(500).send({ message: "NG" });
+    return;
+  }
   const path = req.path.substring(1);
   let buf = Buffer.alloc(0);
   req.on("data", (data, err) => {
@@ -46,11 +45,19 @@ app.post("/:path*", (req, res) => {
 });
 
 app.get("/", (req, res) => {
+  if (lockMode && isLocked) {
+    res.status(200).send([]);
+    return;
+  }
   const keys = Object.keys(mem);
   res.status(200).send(keys);
 });
 
 app.get("/:path*", (req, res) => {
+  if (lockMode && isLocked) {
+    res.status(200).send("");
+    return;
+  }
   const path = req.path.substring(1);
   res.status(200).send(mem[path]);
 });
