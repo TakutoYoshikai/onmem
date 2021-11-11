@@ -2,7 +2,7 @@
 
 if [ "$2" != "" ]; then
   curl $1:3223/$2
-if [ "$1" != "" ]; then
+elif [ "$1" != "" ]; then
   if [ -f ~/.onmem-net ]; then
     onmem `cat ~/.onmem-net` $1
   else
