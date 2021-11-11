@@ -2,9 +2,15 @@
 
 if [ "$2" != "" ]; then
   curl $1:3223/$2
-else
+if [ "$1" != "" ]; then
   if [ -f ~/.onmem-net ]; then
     onmem `cat ~/.onmem-net` $1
+  else
+    echo "Give onmem server host or create ~/.onmem-net" 1>&2
+  fi
+else
+  if [ -f ~/.onmem-net ]; then
+    onmem-keys `cat ~/.onmem-net`
   else
     echo "Give onmem server host or create ~/.onmem-net" 1>&2
   fi
