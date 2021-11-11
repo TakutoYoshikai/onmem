@@ -9,7 +9,7 @@
     "onmem-post": "./post.js",
     "onmem-post-dir": "./bin/onmem-post-dir",
     "onmem-keys": "./keys.js",
-    "onmem": "./bin/onmem"
+    "onmem": "./bin/onmem",
     "onmem-net": "./bin/onmem-net"
   },
   "scripts": {
