@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ "$2" = "" ]; then
+  onmem-keys $1
+else
+  curl $1:3223/$2
+fi
