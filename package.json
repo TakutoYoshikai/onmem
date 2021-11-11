@@ -10,7 +10,8 @@
     "onmem-post-dir": "./bin/onmem-post-dir",
     "onmem-keys": "./keys.js",
     "onmem": "./bin/onmem",
-    "onmem-net": "./bin/onmem-net"
+    "onmem-net": "./bin/onmem-net",
+    "onmem-net-post": "./bin/onmem-net-post"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

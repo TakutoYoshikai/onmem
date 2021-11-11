@@ -3,7 +3,7 @@
 if [ "$2" != "" ]; then
   curl $1:3223/$2
 else
-  if [ -f "~/.onmem-net" ]; then
+  if [ -f ~/.onmem-net ]; then
     curl `cat ~/.onmem-net`:3223/$1
   else
     echo "Give onmem server host or create ~/.onmem-net" 1>&2
